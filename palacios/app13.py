@@ -1,60 +1,55 @@
 import libreria
-def universidad():
-    nombre=libreria.pedir_nombre("nombre:")
-    antiguedad=libreria.pedir_antiguedad("antiguedad:",1,1000)
-    contenido=nombre + " " + str(antiguedad)+ " " + antiguedad
-    libreria.guardar_datos("info.txt",contenido,"a")
-    print("Datos guardados")
-def instituto():
-    nombre=libreria.pedir_nombre("nombre:")
-    antiguedad=libreria.antiguedad("antigüedad:",1,1000)
-    contenido=nombre + " " + str(antiguedad)+ " " + antiguedad
-    libreria.guardar_datos("info.txt",contenido,"a")
-    print("Datos guardados")
-def verDatos():
-    datos=libreria.obtener_datos("info.txt")
-    if(datos!=""):
-        print(datos)
-    else:
-        print("archivo sin datos")
-def universidad():
+def pedir_ins1():
+    print("Se agrego instituto 1")
+def pedir_ins2():
+    print("Se agrego instituto 2")
+
+def pedir_u1():
+    print("Se agrego universidad 1")
+def pedir_u2():
+    print("Se agrego universidad 2")
+
+
+def agregar_inst():
     opc=0
     max=3
     while(opc!=max):
-        print("#########Menú universidad##############")
-        print("#1.nombre de la universidad           #")
-        print("#2.-antigüedad                        #")
-        print("#3.-salir                      #")
-        opc=libreria.pedir_numero("ingrese opción:",1,3)
-    if (opc==1):
-        pedir_nombre()
+        print("##### INSTITUTOS  ######")
+        print("#1. J.M.B              #")
+        print("#2. FEDERAL ALEMANA    #")
+        print("#3. Salir              #")
+        print("########################")
+        opc=libreria.pedir_numero("Ingrese Instituto:",1,3)
+        if(opc==1):
+            pedir_ins1()
+        if(opc==2):
+            pedir_ins2()
 
-    if (opc==2):
-         pedir_antiguedad()
-def instituto():
+def agregar_uni():
     opc=0
     max=3
     while(opc!=max):
-        print("#########Menú instituto##############")
-        print("#1.nombre del instituto          #")
-        print("#2.-antigüedad                        #")
-        print("#3.-salir                      #")
-        opc=libreria.pedir_numero("ingrese opción:",1,3)
-    if (opc==1):
-       instituto()
-    if (opc==2):
-         verDatos()
-
+        print("##### UNIVERSIDAD ######")
+        print("#1. USS                #")
+        print("#2. USMP               #")
+        print("#3. Salir              #")
+        print("########################")
+        opc=libreria.pedir_numero("Ingrese universidad:",1,3)
+        if(opc==1):
+            pedir_u1()
+        if(opc==2):
+            pedir_u2()
 opc=0
 max=3
 while(opc!=max):
-        print("#########Menú ##################")
-        print("#1.-universidad                  #")
-        print("#2.-instituto0                   #")
-        print("#3.-salir                      #")
-        opc=libreria.pedir_numero("ingrese opción:",1,3)
-        if(opc==1):
-            universidad()
-        if(opc==2):
-            verDatos()
 
+    print("#########Menú ##################")
+    print("#1.-universidad                #")
+    print("#2.-instituto                  #")
+    print("#3.-salir                      #")
+    print("################################")
+    opc=libreria.pedir_numero("ingrese opción:",1,3)
+    if(opc==1):
+        agregar_uni()
+    if(opc==2):
+        agregar_inst()

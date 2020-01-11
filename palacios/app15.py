@@ -31,13 +31,13 @@ def agregar_frutas():
     opc=0
     max=6
     while(opc!=max):
-        print("#########Menú verdurass##############")
-        print("#1.-sandia                     #")
-        print("#2.-San José                     #")
-        print("#3.-melon                    #")
-        print("#4.-naranja                     #")
+        print("#########Menú frutas##############")
+        print("#1.-sandia                       #")
+        print("#2.-papaya                       #")
+        print("#3.-melon                        #")
+        print("#4.-naranja                      #")
         print("#5.-platano                      #")
-        print("#6.-salir                      #")
+        print("#6.-salir                        #")
         opc=libreria.pedir_numero("ingrese opción:",1,6)
     if (opc==1):
         pedir_sandia()
@@ -56,11 +56,11 @@ def agregar_verduras():
     max=5
     while(opc!=max):
         print("#########Menú verdurass##############")
-        print("#1.-zapallo                   #")
-        print("#2.-loche                      #")
-        print("#3.-brocoli                      #")
-        print("#4.-cebolla                     #")
-        print("#5.-salir                      #")
+        print("#1.-zapallo                         #")
+        print("#2.-loche                           #")
+        print("#3.-brocoli                         #")
+        print("#4.-cebolla                         #")
+        print("#5.-salir                           #")
         opc=libreria.pedir_numero("ingrese opción:",1,6)
     if (opc==1):
         pedir_zapallo()
